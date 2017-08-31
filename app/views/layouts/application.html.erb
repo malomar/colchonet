@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Colchonet</title>
+    <%= csrf_meta_tags %>
+
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<header>
+    	<div id='header-wrap'>
+     		<h1><%= link_to "colcho.net", root_path %></h1>
+  	      	<nav>
+  	    		<ul>
+  	      			<il><%= link_to t('layout.rooms'), rooms_path %></il>
+  	      			<il><%= link_to t('layout.signup'), new_user_path %></il>
+  	    		</ul>
+  	  		</nav>
+  		</div>
+  	</header>
+
+  	<div id="content">
+  		<% if notice.present? %>
+  			<p id="notice"><%= notice %></p>
+  		<% end %>
+
+  		<% if alert.present? %>
+  			<p id="alert"><%= alert %></p>
+  		<% end %>
+
+    	<%= yield %>
+    </div>
+  </body>
+</html>
