@@ -1,12 +1,22 @@
 pt-BR:
   rooms:
     new:
-      title: Título
+      title: Novo quarto
+    edit:
+      title: Editar quarto
   users:
     new:
       title: Cadastro
     edit:
       title: Editar perfil
+    show:
+      title: "Perfil: %{user_name}"  
+      edit: Editar perfil
+      location: "Localização: %{location}"
+      bio: "Bio: %{bio}"
+    sign_up: 
+      success: Cadastro realizado com sucesso!
+      failed: Não foi possível realizar o cadastro!
   links: 
     back: Voltar
   layout:
