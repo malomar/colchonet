@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   # Para a página inicial respeitar o idioma
   get '/:locale' => 'home#index', locale: LOCALES
   
+  resource :confirmation, only: [:show]
+  
   root 'home#index'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
