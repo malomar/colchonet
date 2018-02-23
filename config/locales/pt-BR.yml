@@ -17,6 +17,10 @@ pt-BR:
     sign_up: 
       success: Cadastro realizado com sucesso!
       failed: Não foi possível realizar o cadastro!
+  user_sessions:
+    new:
+      title: Login
+      sign_up: Cadastre-se
   signup:
     confirm_email:
       subject: 'Colcho.net - Confirme seu email'
@@ -36,6 +40,9 @@ pt-BR:
     signup: Cadastro
   general:
     form_error: Há erros no formulário, por favor verifique.
+  flash:
+    notice:
+      signed_in: Login efetuado com sucesso
   activerecord:
     models:
       room: Quarto
@@ -52,3 +59,15 @@ pt-BR:
         location: Localização    
         password: Senha
         password_confirmation: Confirme sua senha
+  activemodel:
+    attributes:
+      user_session:
+        email: Email
+        password: Senha
+    errors:
+      messages:
+        invalid_login: 'Usuário ou senha inválidos'
+  helpers:
+    submit:
+      user_session:
+        create: 'Entrar'

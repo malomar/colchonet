@@ -1,3 +1,4 @@
+# encoding: utf-8
 class User < ApplicationRecord
   EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
   
@@ -8,6 +9,8 @@ class User < ApplicationRecord
   validates_length_of :bio, minimum: 30, allow_blank: false
 
   validate :email_format
+
+  scope :confirmed, -> { where.not(confirmed_at: nil) }
 
   has_secure_password
 
@@ -25,6 +28,16 @@ class User < ApplicationRecord
 
   def confirmed?
     confirmed_at.present?
+  end
+
+  def self.authenticate(email, password)
+    # user = confirmed.find_by(email: email)
+    # if user.present?
+    #   user.authenticate(password)
+    #end
+    user = confirmed.
+               find_by(email: email).
+               try(:authenticate, password)
   end
 
   private
