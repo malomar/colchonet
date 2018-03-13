@@ -4,6 +4,14 @@ pt-BR:
       title: Novo quarto
     edit:
       title: Editar quarto
+    show:
+      title: Exibir quarto
+    index:
+      title: Quartos disponíveis
+    room:
+      owner_html: '&mdash; %{owner} (%{when})'
+      edit: 'Editar'
+      destroy: 'Remover'
   users:
     new:
       title: Cadastro
@@ -37,12 +45,23 @@ pt-BR:
     back: Voltar
   layout:
     rooms: Quartos
+    new_room: Cadastre seu quarto!
     signup: Cadastro
+    signin: Login
+    signout: Logout
+    my_profile: Meu perfil
   general:
     form_error: Há erros no formulário, por favor verifique.
   flash:
+    alert:
+      needs_login: "Você precisa estar logado para continuar"
     notice:
-      signed_in: Login efetuado com sucesso
+      signed_in: 'Login efetuado com sucesso!'
+      signed_out: 'Logout efetuado com sucesso. Até logo!'
+      already_logged_in: 'Você já está logado!'
+      room_created: 'Quarto criado com sucesso!'
+      room_updated: 'Quarto alterado com sucesso!'
+      room_deleted: 'Quarto excluído com sucesso!'
   activerecord:
     models:
       room: Quarto
@@ -71,3 +90,5 @@ pt-BR:
     submit:
       user_session:
         create: 'Entrar'
+  dialogs:
+    destroy: 'Você tem certeza de que deseja remover?'

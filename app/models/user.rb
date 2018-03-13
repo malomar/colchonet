@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
   validate :email_format
 
+  scope :most_recent, -> { order('created_at DESC') }
   scope :confirmed, -> { where.not(confirmed_at: nil) }
 
   has_secure_password

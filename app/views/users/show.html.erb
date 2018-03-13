@@ -5,5 +5,7 @@
 	<li><%= t '.bio', bio: @user.bio %></li>
 </ul>
 
+<%= render @room %>
+
 <%= link_to t('.edit'), edit_user_path(@user) %>
 <%= link_to 'Home', root_path %>

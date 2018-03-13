@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Rooms</h1>
+<h1><%= t '.title' %></h1>
 
+<!--
 <table>
   <thead>
     <tr>
@@ -14,18 +15,24 @@
 
   <tbody>
     <% @rooms.each do |room| %>
+      <article class="room">
+      <h2><%= link_to room.title, room %></h2>
+
       <tr>
         <td><%= room.title %></td>
         <td><%= room.location %></td>
         <td><%= room.description %></td>
         <td><%= link_to 'Show', room %></td>
-        <td><%= link_to 'Edit', edit_room_path(room) %></td>
-        <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Alterar', edit_room_path(room) %></td>
+        <td><%= link_to 'Excluir', room, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+-->
+
+<%= render @rooms %>
 
 <br>
 
-<%= link_to 'New Room', new_room_path %>
+<%= link_to t('rooms.new.title'), new_room_path %>
